@@ -1,0 +1,325 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Modern Russia: A Journey Since 1991</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet" />
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Roboto', sans-serif;
+      background-color: #f5f5f5;
+      color: #333;
+      line-height: 1.6;
+    }
+
+    header {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      background-color: #fff;
+      padding: 15px 0;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      z-index: 1000;
+    }
+
+    header h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: 2em;
+      text-align: center;
+      color: #0052B4;
+    }
+
+    nav {
+      text-align: center;
+      margin-top: 10px;
+    }
+
+    nav a {
+      color: #D80027;
+      text-decoration: none;
+      margin: 0 15px;
+      font-size: 1.1em;
+      transition: color 0.3s;
+    }
+
+    nav a:hover {
+      color: #0052B4;
+    }
+
+    main {
+      margin-top: 80px;
+    }
+
+    section {
+      padding: 50px 20px;
+      max-width: 1000px;
+      margin: 0 auto;
+    }
+
+    h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: 2.5em;
+      color: #0052B4;
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    p {
+      font-size: 1.1em;
+      color: #555;
+      text-align: justify;
+      margin-bottom: 15px;
+    }
+
+    #hero {
+      position: relative;
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      background: url('kremlin.jpg') no-repeat center center;
+      background-size: cover;
+      color: #fff;
+    }
+
+    #hero::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent overlay */
+      z-index: 1;
+    }
+
+    #hero h1, #hero p {
+      position: relative;
+      z-index: 2;
+    }
+
+    #hero h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: 3.5em;
+      margin-bottom: 20px;
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    }
+
+    #hero p {
+      font-size: 1.5em;
+      opacity: 0;
+      animation: fadeIn 2s ease-in forwards;
+    }
+
+    @keyframes fadeIn {
+      0% { opacity: 0; }
+      100% { opacity: 1; }
+    }
+
+    #milestones .milestone-cards {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      justify-content: center;
+    }
+
+    .milestone-card {
+      flex: 1;
+      min-width: 250px;
+      background-color: #fff;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+
+    .milestone-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    }
+
+    .milestone-card h3 {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.5em;
+      color: #D80027;
+      margin-bottom: 10px;
+    }
+
+    #culture, #economy, #global-role, #contact {
+      background-color: #fff;
+      border-radius: 10px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+
+    .contact-links a {
+      color: #0052B4;
+      text-decoration: none;
+      margin: 0 10px;
+      transition: color 0.3s;
+    }
+
+    .contact-links a:hover {
+      color: #D80027;
+    }
+
+    .back-to-top {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background-color: #0052B4;
+      color: #fff;
+      padding: 10px 15px;
+      border-radius: 5px;
+      text-decoration: none;
+      font-size: 1em;
+      transition: background-color 0.3s;
+    }
+
+    .back-to-top:hover {
+      background-color: #D80027;
+    }
+
+    /* Responsive Design */
+    @media (max-width: 768px) {
+      header h1 {
+        font-size: 1.5em;
+      }
+
+      nav a {
+        font-size: 0.9em;
+        margin: 0 10px;
+      }
+
+      #hero h1 {
+        font-size: 2.5em;
+      }
+
+      #hero p {
+        font-size: 1.2em;
+      }
+
+      section {
+        padding: 30px 15px;
+      }
+
+      h2 {
+        font-size: 2em;
+      }
+
+      p {
+        font-size: 1em;
+      }
+
+      .milestone-card {
+        min-width: 100%;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Modern Russia (1991–Present)</h1>
+    <nav>
+      <a href="#hero">Home</a>
+      <a href="#milestones">Milestones</a>
+      <a href="#culture">Culture</a>
+      <a href="#economy">Economy</a>
+      <a href="#global-role">Global Role</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <main>
+    <section id="hero">
+      <h1>Modern Russia</h1>
+      <p>A Journey of Resilience and Renewal Since 1991</p>
+    </section>
+
+    <section id="milestones">
+      <h2>Key Historical Milestones</h2>
+      <div class="milestone-cards">
+        <div class="milestone-card">
+          <h3>Dissolution of the USSR (1991)</h3>
+          <p>The USSR dissolved on December 31, 1991, following the Belavezha Accords. Russia emerged as an independent state under President Boris Yeltsin, marking the beginning of a turbulent transition to a market economy.</p>
+        </div>
+        <div class="milestone-card">
+          <h3>Economic Reforms (1990s)</h3>
+          <p>The 1990s saw "shock therapy" reforms, privatizing state enterprises. While this created a new class of oligarchs, it also led to economic hardship, with GDP dropping by nearly 40% and hyperinflation peaking at 2,500% in 1992.</p>
+        </div>
+        <div class="milestone-card">
+          <h3>Putin's Era (2000–Present)</h3>
+          <p>Vladimir Putin became president in 2000, stabilizing the economy through oil exports and centralizing power. His leadership saw GDP growth averaging 7% annually in the 2000s, though it also raised concerns over democratic freedoms.</p>
+        </div>
+        <div class="milestone-card">
+          <h3>Crimea Annexation (2014)</h3>
+          <p>Russia annexed Crimea in 2014 following a controversial referendum, leading to international sanctions and heightened tensions with the West, particularly the United States and NATO.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="culture">
+      <h2>Cultural Highlights</h2>
+      <p>Modern Russian culture is a vibrant blend of tradition and innovation. Literature, music, and ballet remain world-renowned, with figures like author Dmitry Glukhovsky and the Bolshoi Ballet gaining global acclaim. The Russian Orthodox Church has seen a revival, influencing societal values.</p>
+      <p>Digital culture has also flourished, with platforms like VKontakte (Russia's equivalent to Facebook) and a booming gaming industry. Annual events like Maslenitsa and Victory Day celebrations showcase Russia's rich traditions and national pride.</p>
+    </section>
+
+    <section id="economy">
+      <h2>Economic Overview</h2>
+      <p>Russia's economy is heavily reliant on natural resources, particularly oil and gas, which account for about 60% of exports as of 2025. The country has the world's 11th-largest GDP, valued at approximately $1.8 trillion USD in 2024, according to the World Bank. However, sanctions since 2014 have pushed economic diversification, with growth in tech sectors like cybersecurity (e.g., Kaspersky Lab).</p>
+      <p>Despite progress, challenges remain: income inequality is high, with the top 10% owning 46% of wealth, and inflation has averaged 5–6% annually in recent years, impacting living standards.</p>
+    </section>
+
+    <section id="global-role">
+      <h2>Global Role</h2>
+      <p>Russia remains a major global player, holding a permanent seat on the UN Security Council. Its military spending, around $65 billion in 2024, supports a formidable presence, including nuclear capabilities. Russia has expanded its influence in regions like the Middle East (e.g., Syria) and Africa through arms deals and energy partnerships.</p>
+      <p>However, geopolitical tensions persist, particularly with the West over Ukraine and cybersecurity issues. Russia's pivot to Asia, especially its partnership with China, has strengthened, with bilateral trade reaching $240 billion in 2024.</p>
+    </section>
+
+    <section id="contact">
+      <h2>Contact the Creator</h2>
+      <p>This portfolio was created to showcase the dynamic history of Modern Russia. For inquiries or feedback, reach out to the creator:</p>
+      <p>Email: example@email.com</p>
+      <p class="contact-links">
+        <a href="#">LinkedIn</a> | <a href="#">GitHub</a> | <a href="#">Portfolio</a>
+      </p>
+      <p>Created on June 15, 2025</p>
+    </section>
+  </main>
+
+  <a href="#hero" class="back-to-top">Back to Top</a>
+
+  <script>
+    // Smooth scrolling for navigation links
+    document.querySelectorAll('nav a').forEach(anchor => {
+      anchor.addEventListener('click', function(e) {
+        e.preventDefault();
+        const targetId = this.getAttribute('href').substring(1);
+        const targetSection = document.getElementById(targetId);
+        window.scrollTo({
+          top: targetSection.offsetTop - 80,
+          behavior: 'smooth'
+        });
+      });
+    });
+
+    // Back to top button functionality
+    document.querySelector('.back-to-top').addEventListener('click', function(e) {
+      e.preventDefault();
+      window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+      });
+    });
+  </script>
+</body>
+</html>
