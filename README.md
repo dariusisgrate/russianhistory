@@ -1,2 +1,2 @@
 # russianhistory
-this web page is about countryes history
+this web page is about countries history
